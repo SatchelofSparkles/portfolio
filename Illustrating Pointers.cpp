@@ -18,7 +18,7 @@ r = &z;
 
 cout << "p = &x\nq = &y\nr = &z\n\n";
 
-cout << "Table:\n       p          *p     x         &x\n" << "       q          q*     y         &y\n" << "       r          r*     z,        &z\n\n";
+cout << "Table:\n       p          *p     x         &x\n" << "       q          *q     y         &y\n" << "       r          *r     z        &z\n\n";
 
 cout << "Inspecting the pointers and objects\n";
 cout << p << "   " << *p << "   " << x << "   " << &x <<"\n";
