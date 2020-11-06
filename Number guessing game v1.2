@@ -1,0 +1,29 @@
+def game():
+  import random
+  #allocate random value, "number" and field "game_tracker" to capture player's choices
+  number = random.randint(1, 10)
+  game_tracker = []
+  #turns allowed defined by length of game_tracker list.
+  #entering name included & counted as an item
+  while len(game_tracker) < 7:
+    #initially get name
+    if(len(game_tracker) == 0):
+      print("Hello! What is your name?")
+      #enter guesses into game_tracker list
+      game_tracker.append(input())
+      print("Well, ", game_tracker[0], ", I am thinking of a number between 1 and 10. Have a guess! This is your", len(game_tracker), "st guess")
+    else: print("Have another go", game_tracker[0], ". This is turn number", len(game_tracker))
+    game_tracker.append(input())
+    #append guesses - therefore always test final item in list
+    if(int(game_tracker[-1]) == number):
+      print("Yes! You got it! You Rock!")
+      print("You won the game")
+      break
+    elif(int(game_tracker[-1]) < number):
+      print("no, you need to go a nudge higher there, sweetie")
+    else:
+      print("No way, that's definitely too high there")
+  if len(game_tracker) > 6 and game_tracker.count(str(number)) == 0:
+    print("Oh, I'm sorry, ", game_tracker[0], "you have used up all your goes and lost the game.")
+  print("game_tracker:", game_tracker, "\nSecret number: ", number)
+game()
