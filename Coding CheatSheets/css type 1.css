@@ -1,0 +1,15 @@
+*
+
+body {font-family:sans-serif; font-size: 12pt; color: Black; background: #ffffBB;}
+
+div {text-align:top; background: #D2F2A2;}
+
+#title {position: center}
+
+#banner {position: relative; border: 6px; background: #555555;}
+
+#side {position: relative; top: 0px; left: 0px; width: 160px; background: LightSteelBlue;}
+
+#main {position: relative; top: 0px; left: 0px;}
+
+#p {border: 0px}
